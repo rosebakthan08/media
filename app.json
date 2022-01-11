@@ -1,7 +1,7 @@
 {
     "name": "media delete userbot",
     "description": "this bot we created on;y for delete media files from a group and copy it to your channel.",
-    "repository": "https://github.com/paavampayyan/media-delete-userbot.git",
+    "repository": "https://github.com/paavampayyan/ub_media_d.git",
     "keywords": [
         "python",
         "pyrogram"
