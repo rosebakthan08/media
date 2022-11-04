@@ -57,33 +57,7 @@ def clean_data():
             print(f"almost {c} files deleted")
             idss.clear()     
 
-def channel_delete():
-    print("trying to delete channel messages")
-    for ids in ub.search_messages(chat_id=channel, filter="photo_video"):
-        msg_id = ids.message_id
-        idss.append(msg_id)
-        ub.delete_messages(chat_id=channel, message_ids=msg_id)
-    else:
-        if len(idss) == 0:
-            print("no photos to delete")
-            return
-        else:
-            c = len(idss)
-            print(f"almost {c} files deleted")
-            idss.clear() 
 
-    for ids in ub.search_messages(chat_id=channel, filter="document", limit=5):
-        msg_id = ids.message_id
-        idss.append(msg_id)
-        ub.delete_messages(chat_id=channel, message_ids=msg_id)
-    else:
-        if len(idss) == 0:
-            print("no files to delete")
-            return
-        else:
-            c = len(idss)
-            print(f"almost {c} files deleted")
-            idss.clear()  
     
 scheduler = BackgroundScheduler()
 scheduler.add_job(clean_data, 'interval' , seconds=g_time)
@@ -91,11 +65,7 @@ scheduler.add_job(clean_data, 'interval' , seconds=g_time)
 
 scheduler.start()   
 
-scheduler = BackgroundScheduler()
-scheduler.add_job(channel_delete, 'interval' , minutes=c_time)
 
-
-scheduler.start()  
 
 
 
