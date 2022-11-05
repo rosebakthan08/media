@@ -24,7 +24,7 @@
             "description": "pyrogram string"
         },
         "GROUP_DELETE_TIME": {
-            "description": "time in seconds : 1 - 60"
+            "description": "time in seconds : 1 - 66"
         },
         "GROUP_ID": {
             "description": "Group id 'adholokham'"
